@@ -31,7 +31,7 @@ function Quiz({ subject, questions, onFinish }) {
 
     function nextQuestion() {
         setSelected(null);
-        setTime(10);
+        setTime(25);
 
         if (index + 1 < questions.length) {
             setIndex(index + 1);
