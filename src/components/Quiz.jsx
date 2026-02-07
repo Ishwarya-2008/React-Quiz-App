@@ -16,7 +16,7 @@ function Quiz({ subject, questions, onFinish }) {
 
         const timer = setTimeout(() => {
             setTime(time - 1);
-        }, 1000);
+        }, 3000);
 
         return () => clearTimeout(timer);
     }, [time]);
@@ -51,12 +51,8 @@ function Quiz({ subject, questions, onFinish }) {
             {currentQuestion.options.map((opt) => (
                 <button
                     key={opt}
-                    className={`option-btn ${selected === opt
-                            ? opt === currentQuestion.answer
-                                ? "correct"
-                                : "wrong"
-                            : ""
-                        }`}
+                    className={`option-btn ${selected === opt ? opt === currentQuestion.answer ? "correct" : "wrong" : ""
+                    }`}
                     disabled={selected !== null}
                     onClick={() => handleOptionClick(opt)}
                 >
