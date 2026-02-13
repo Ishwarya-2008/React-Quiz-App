@@ -2,7 +2,6 @@ import { useState } from "react";
 import Result from "./Result";
 import Quiz from "./Quiz";
 import CategoryGrid from "./CategoryGrid";
-import "./index.css";
 import questions from "../data/questions";
 
 
