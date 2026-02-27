@@ -16,7 +16,7 @@ function Quiz({ subject, questions, onFinish }) {
 
         const timer = setTimeout(() => {
             setTime(time - 1);
-        }, 3000);
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, [time]);
