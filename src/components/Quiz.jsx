@@ -4,7 +4,7 @@ function Quiz({ subject, questions, onFinish }) {
     const [index, setIndex] = useState(0);
     const [score, setScore] = useState(0);
     const [selected, setSelected] = useState(null);
-    const [time, setTime] = useState(10);
+    const [time, setTime] = useState(25);
 
     const currentQuestion = questions[index];
 
@@ -16,7 +16,7 @@ function Quiz({ subject, questions, onFinish }) {
 
         const timer = setTimeout(() => {
             setTime(time - 1);
-        }, 1000);
+        }, 2000);
 
         return () => clearTimeout(timer);
     }, [time]);
